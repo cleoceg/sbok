@@ -1,0 +1,111 @@
+<%- include _header %>
+<h1>Phases &DoubleRightArrow; <%=step.step%></h1>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card card-block">
+      <h3 class="card-title">Introduction</h3>
+      <p class="card-text"><%=step.introduction%></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <% for(var i=0; i<processes.length; i++) {%>
+    <div class="col-sm-6">
+        <div class="card card-block">
+            <h3 class="card-title"><%=processes[i].title%></h3>
+            <p class="card-text"><%=processes[i].introduction%></p>
+            <div class="card card-block">
+                <h4 class="card-title">Inputs</h4>
+                <% for(var j=0; j<processes[i].input.length; j++) {%>
+                    <%
+                        var lst = processes[i].input[j].texte;
+                        var txt = ""
+                        for (var k=0; k<lst.length; k++)
+                            txt+='<p>'+lst[k];
+                    %>
+                        <li><button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".<%=processes[i].input[j].id%>">
+                        <%=processes[i].input[j].title%>
+                    </button>
+                    <div class="modal fade <%=processes[i].input[j].id%>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                        <h4 class="modal-title" id="myModalLabel"><%=processes[i].input[j].title%></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <%- txt%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>    
+            </div>
+            <div class="card card-block">
+                <h4 class="card-title">Tools</h4>
+                <% for(var j=0; j<processes[i].tools.length; j++) {%>
+                    <%
+                        var lst = processes[i].tools[j].texte;
+                        var txt = ""
+                        for (var k=0; k<lst.length; k++)
+                            txt+='<p>'+lst[k];
+                    %>
+                        <li><button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".<%=processes[i].tools[j].id%>">
+                        <%=processes[i].tools[j].title%>
+                    </button>
+                    <div class="modal fade <%=processes[i].tools[j].id%>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                        <h4 class="modal-title" id="myModalLabel"><%=processes[i].tools[j].title%></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <%- txt%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>    
+            </div>
+            <div class="card card-block">
+                <h4 class="card-title">Outputs</h4>
+                <% for(var j=0; j<processes[i].output.length; j++) {%>
+                    <%
+                        var lst = processes[i].output[j].texte;
+                        var txt = ""
+                        for (var k=0; k<lst.length; k++)
+                            txt+='<p>'+lst[k];
+                    %>
+                        <li><button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".<%=processes[i].output[j].id%>">
+                        <%=processes[i].output[j].title%>
+                    </button>
+                    <div class="modal fade <%=processes[i].output[j].id%>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                        <h4 class="modal-title" id="myModalLabel"><%=processes[i].output[j].title%></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <%- txt%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>    
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<%- include _footer %>

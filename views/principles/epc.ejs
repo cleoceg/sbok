@@ -1,0 +1,134 @@
+<%- include ../_header %>
+
+<h1 class="display-4"><%=title%></h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#Transparency">Transparency</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#Inspection">Inspection</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#Adaptation">Adaptation</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="overview" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <% for (var i=0; i<introduction.length; i++) { %>
+                        <p class="card-text"><%-introduction[i]%></p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="Transparency" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <% for (var i=0; i<Transparency.comment.length; i++) { %>
+                            </p><%-Transparency.comment[i]%>
+                        <% } %>
+                    </div>
+                    <div class="card card-block">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-Transparency.image%>" alt="Transparency">
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="Inspection" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<Inspection.comment.length; i++) { %>
+                                </p><%-Inspection.comment[i]%>
+                            <% } %>
+                        </div>
+                        <div class="card card-block">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-Inspection.image%>" alt="Inspection">
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="Adaptation" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<Adaptation.part1.length; i++) { %>
+                                </p><%-Adaptation.part1[i]%>
+                            <% } %>
+                        </div>
+                        <div class="card card-block">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-Adaptation.image1%>" alt="Adpatation">
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<Adaptation.part2.length; i++) { %>
+                                </p><%-Adaptation.part2[i]%>
+                            <% } %>
+                        </div>
+                        <div class="card card-block">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-Adaptation.image2%>" alt="Challenges">
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<%- include ../_footer %>
+

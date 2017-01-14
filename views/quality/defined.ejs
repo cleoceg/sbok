@@ -7,10 +7,10 @@
     <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#benefits">Benefits</a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#scope"><%=scope.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#goals">Goals</a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#value"><%=value.title%></a>
   </li>
 </ul>
 
@@ -27,13 +27,13 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane" id="benefits" role="tabpanel">
+    <div class="tab-pane" id="scope" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
                     <div class="card card-block">
-                        <% for (var i=0; i<benefits.length; i++) { %>
-                            </p><%-benefits[i]%>
+                        <% for (var i=0; i<scope.comment.length; i++) { %>
+                            </p><%-scope.comment[i]%>
                         <% } %>
                     </div>
                     
@@ -43,35 +43,21 @@
         </div>
     </div>
    
-    <div class="tab-pane" id="goals" role="tabpanel">
+    <div class="tab-pane" id="value" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
                     <div class="card card-block">
                         <div class="card card-block">
-                            <% for (var i=0; i<goals.length; i++) { %>
-                                </p><%-goals[i]%>
+                            <% for (var i=0; i<value.comment.length; i++) { %>
+                                </p><%-value.comment[i]%>
                             <% } %>
                         </div>
-                        <div class="card card-block">
-                        <div class="col-sm-12">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-8">
-                                <div class="card card-block">
-                                    <img class="w-100" src="/<%-image%>" alt="self-organization">
-                                </div>
-                            </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
-    
+</div>
 
 <%- include ../_footer %>

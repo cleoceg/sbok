@@ -117,7 +117,102 @@ var txtCollaboration = {
     image: '../images/collaboration.png'
 };
 
+txtValueBased = {
+	title: 'Value-based Prioritization',
+	overview: [
+		'The Scrum framework is driven by the goal of delivering maximum business value in a minimum time span. One of the most effective tools for delivering the greatest value in the shortest amount of time is prioritization.',
+		"Prioritization can be defined as determination of the order and separation of what must be done now, from what needs to be done later. The concept of prioritization is not new to project management. The traditional Waterfall model of project management proposes using multiple task prioritization tools. From the Project Manager’s point of view, prioritization is integral because certain tasks must be accomplished first to expedite the development process and achieve the project goals. Some of the traditional techniques of task prioritization include setting deadlines for delegated tasks and using prioritization matrices.",
+		'Scrum, however, uses Value-based Prioritization as one of the core principles that drives the structure and functionality of the entire Scrum framework—it helps projects benefit through adaptability and iterative development of the product or service. More significantly, Scrum aims at delivering a valuable product or service to the customer on an early and continuous basis.',
+		'Prioritization is done by the Product Owner when he or she prioritizes User Stories in the Prioritized Product Backlog. The Prioritized Product Backlog contains a list of all the requirements needed to bring the project to fruition.',
+		'Once the Product Owner has received the business requirements from the customer and written these down in the form of workable User Stories, he or she works with the customer and sponsor to understand which business requirements provide maximum business value. The Product Owner must understand what the customer wants and values in order to arrange the Prioritized Product Backlog Items (User Stories) by relative importance. Sometimes, a customer may mandate all User Stories to be of high priority. While this might be true, even a list of high-priority User Stories needs to be prioritized within the list itself. Prioritizing a backlog involves determining the criticality of each User Story. High-value requirements are identified and moved to the top of the Prioritized Product Backlog. The processes in which the principle of Value-based Prioritization is put into practice are Create Prioritized Product Backlog and Groom Prioritized Product Backlog.',
+		'Simultaneously, the Product Owner must work with the Scrum Team to understand the project risks and uncertainty as they may have negative consequences associated with them. This should be taken into account while prioritizing User Stories on a value-based approach (refer to the Risk chapter for more information). The Scrum Team also alerts the Product Owner of any dependencies that arise out of implementation. These dependencies must be taken into account during prioritization. Prioritization may be based on a subjective estimate of the projected business value or profitability, or it can be based on results and analysis of the market using tools including, but not limited to, customer interviews, surveys, and financial models and analytical techniques.',
+		'The Product Owner has to translate the inputs and needs of the project stakeholders to create the Prioritized Product Backlog. Hence, while prioritizing the User Stories in the Prioritized Product Backlog, the following three factors are considered:',
+		'1. Value',
+		'2. Risk or uncertainty',
+		'3. Dependencies',
+		'Thus prioritization results in deliverables that satisfies the requirements of the customer with the objective of delivering the maximum business value in the least amount of time.'
+	],
+	image: '../images/value_based.png'
+};
+
+txtTimeBoxing = {
+	title: 'Time-boxing',
+	overview: [
+		'Scrum treats time as one of the most important constraints in managing a project. To address the constraint of time, Scrum introduces a concept called ‘Time-boxing’ which proposes fixing a certain amount of time for each process and activity in a Scrum project. This ensures that Scrum Team members do not take up too much or too little work for a particular period of time and do not expend their time and energy on work for which they have little clarity.',
+		'Some of the advantages of Time-boxing are as follows:',
+		'* Efficient development process',
+		'* Less overheads',
+		'* High velocity for teams',
+		'Time-boxing can be utilized in many Scrum processes, for example, in the Conduct Daily Standup process, the duration of the Daily Standup Meeting is Time-boxed. At times, Time-boxing may be used to avoid excessive improvement of an item (i.e., gold-plating).',
+		'Time-boxing is a critical practice in Scrum and should be applied with care. Arbitrary Time-boxing can lead to de-motivation of the team and may have the consequence of creating an apprehensive environment, so it should be used appropriately.'
+	],
+	sprint: {
+		title: 'Sprint',
+		comment: [
+			'A Sprint is a Time-boxed iteration of one to six weeks in duration during which the Scrum Master guides, facilitates, and shields the Scrum Team from both internal and external impediments during the Create Deliverables process. This aids in avoiding vision creep that could affect the Sprint goal. During this time, the team works to convert the requirements in the Prioritized Product Backlog into shippable product functionalities. To get maximum benefits from a Scrum project, it is always recommended to keep the Sprint Time-boxed to 4 weeks, unless there are projects with very stable requirements, where Sprints can extend up to 6 weeks.'
+		]
+	},
+	standup: {
+		title: 'Daily Standup Meeting',
+		comment: [
+			'The Daily Standup Meeting is a short daily meeting, Time-boxed to 15 minutes. The team members get together to report the progress of the project by answering the following three questions:',
+			'1. What did I complete yesterday?',
+			'2. What will I complete today?',
+			'3. What impediments or obstacles (if any) am I currently facing?',
+			'This meeting is carried out by the team as part of the Conduct Daily Standup process.'
+		]
+	},
+	planning: {
+		title: 'Sprint Planning Meeting',
+		comment: [
+			'This meeting is conducted prior to the Sprint as part of the Create Sprint Backlog process. It is Time-boxed to eight hours for a one-month Sprint. The Sprint Planning Meeting is divided into two parts:',
+			'1. Objective Definition—During the first half of the meeting, the Product Owner explains the highest priority User Stories or requirements in the Prioritized Product Backlog to the Scrum Team. The Scrum Team in collaboration with the Product Owner then defines the Sprint goal.',
+			'2. Task Estimation—During the second half of the meeting, the Scrum Team decides “how” to complete the selected Prioritized Product Backlog Items to fulfill the Sprint goal.',
+			'At times, the Task Planning Meetings (conducted during the Create Tasks process) and the Task Estimation Meetings (conducted during Estimate Tasks process) are also referred to as Sprint Planning Meetings.'
+		]
+	},
+	review: {
+		title: 'Sprint Review Meeting',
+		comment: [
+			'The Sprint Review Meeting is Time-boxed to four hours for a one-month Sprint. During the Sprint Review Meeting that is conducted in the Demonstrate and Validate Sprint process, the Scrum Team presents the deliverables of the current Sprint to the Product Owner. The Product Owner reviews the product (or product increment) against the agreed Acceptance Criteria and either accepts or rejects the completed User Stories.'
+		]
+	},
+	retrospect: {
+		title: 'Retrospect Sprint Meeting',
+		comment: [
+			'The Retrospect Sprint Meeting is Time-boxed to 4 hours for a onemonth Sprint and conducted as part of the Retrospect Sprint process. During this meeting, the Scrum Team gets together to review and reflect on the previous Sprint in terms of the processes followed, tools employed, collaboration and communication mechanisms, and other aspects relevant to the project. The team discusses what went well during the previous Sprint and what did not go well, the goal being to learn and make improvements in the Sprints to follow. Some improvement opportunities or best practices from this meeting could also be updated as part of the Scrum Guidance Body documents.'
+		]
+	},
+	image: '../imageS/timeboxing.png'
+};
+
+txtIterative = {
+	title: 'Iterative Development',
+	overview: [
+		'The Scrum framework is driven by the goal of delivering maximum business value in a minimum time span. To achieve this practically, Scrum believes in Iterative Development of Deliverables.',
+		'In most complex projects, the customer may not be able to define very concrete requirements or is not confident of what the end product may look like. The iterative model is more flexible in ensuring that any change requested by the customer can be included as part of the project. User Stories may have to be written constantly throughout the duration of the project. In the initial stages of writing, most User Stories are high-level functionalities. These User Stories are known as Epic(s). Epic(s) are usually too large for teams to complete in a single Sprint. Therefore, they are broken down into smaller User Stories.',
+		'Each complex aspect of the project is broken down through progressive elaboration during the Groom Prioritized Product Backlog process. The Create User Stories and the Estimate, Approve, and Commit User Stories processes are used to add new requirements to the Prioritized Product Backlog. The Product Owner’s task is to ensure increased ROI by focusing on value and its continuous delivery with each Sprint. The Product Owner should have a very good understanding of the project’s business justification and the value the project is supposed to deliver as he drafts the Prioritized Product Backlog and thereby decides what deliverables and hence values are delivered in each Sprint. Then the Create Tasks, Estimate Tasks, and Create Sprint Backlog processes produce the Sprint Backlog which the team uses to create the deliverables.',
+		'In each Sprint, the Create Deliverables process is used to develop the Sprint’s outputs. The Scrum Master has to ensure that the Scrum processes are followed and facilitates the team to work in the most productive manner possible. The Scrum Team self-organizes and aims to create the Sprint Deliverables from the User Stories in the Sprint Backlog. In large projects, various cross-functional teams work in parallel across Sprints, delivering potentially shippable solutions at the end of each Sprint. After the Sprint is complete, The Product Owner accepts or rejects the deliverables based on the Acceptance Criteria in the Demonstrate and Validate Sprint process.',
+		'As illustrated below, Scrum projects are completed in an iterative manner delivering value throughout the lifecycle of the project.',
+		'The benefit of iterative development is that it allows for course correction as all the people involved get better understanding of what needs to be delivered as part of the project and incorporate these learning in an iterative manner. Thus the time and effort required to reach the final end point is greatly reduced and the team produces deliverables that are better suited to the final business environment.'
+	],
+	image: '../images/iterative.png'
+};
+
+txtVs = {
+	title: 'Scrum vs. Traditional Project Management',
+	overview: [
+		'The emphasis in traditional Project Management is to conduct detailed upfront planning for the project with emphasis on fixing the scope, cost, and schedule and managing those parameters. Traditional project management may at times lead to a situation where the plan has succeeded yet the customer is not satisfied.',
+		'The Scrum Framework is founded on the belief that the knowledge workers of today can offer much more than just their technical expertise, and that trying to fully map out and plan for an ever-changing environment is not efficient. Therefore, Scrum encourages data-based, iterative decision making. In Scrum, the primary focus is on delivering products that satisfy customer requirements in small iterative shippable increments.',
+		'To deliver the greatest amount of value in the shortest amount of time, Scrum promotes prioritization and Time-boxing over fixing the scope, cost and schedule of a project. An important feature of Scrum is selforganization, which allows the individuals who are actually doing the work to estimate and take ownership of tasks.'
+	]
+};
+
 exports.txtIntroduction = txtIntroduction;
 exports.txtEpc = txtEpc;
 exports.txtSelforg = txtSelforg;
 exports.txtCollaboration = txtCollaboration;
+exports.txtValueBased = txtValueBased;
+exports.txtTimeBoxing = txtTimeBoxing;
+exports.txtIterative = txtIterative;
+exports.txtVs = txtVs;

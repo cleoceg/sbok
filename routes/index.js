@@ -10,6 +10,9 @@ var ctrproc = require('../controllers/ctrprocessus');
 var ctrunderc = require('../controllers/under_construction');
 var ctrRisk = require('../controllers//ctrrisk');
 var ctrPrinciples = require('../controllers/ctrprinciples');
+var ctrQuality = require('../controllers/ctrquality');
+var ctrChange = require('../controllers/ctrchange');
+var ctrBJ = require('../controllers/ctrjustification')
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -25,9 +28,10 @@ router.get('/intro', ctrPrinciples.intro);
 router.get('/epc', ctrPrinciples.epc);
 router.get('/selforg', ctrPrinciples.selforg);
 router.get('/collaboration', ctrPrinciples.collaboration);
-router.get('/valuebased', ctrunderc.underconst);
-router.get('/timeboxing', ctrunderc.underconst);
-router.get('/iterative', ctrunderc.underconst);
+router.get('/valuebased', ctrPrinciples.valuebased);
+router.get('/timeboxing', ctrPrinciples.timeboxing);
+router.get('/iterative', ctrPrinciples.iterative);
+router.get('/principles_vs', ctrPrinciples.vs);
 
 // Phases
 router.get('/phases', ctrphases.phases);
@@ -38,17 +42,41 @@ router.get('/implement', ctrimplement.implement);
 router.get('/review', ctrreview.review);
 router.get('/processus/:id', ctrproc.display);
 
-// Roles
+// Organization
 router.get('/owner', ctrunderc.underconst);
 router.get('/master', ctrunderc.underconst);
 router.get('/team', ctrunderc.underconst);
 router.get('/noncore', ctrunderc.underconst);
 
 // Business Justification
+router.get('/bj_intro', ctrBJ.bjIntro);
+router.get('/bj_roles', ctrBJ.bjRole);
+router.get('/bj_vdd', ctrunderc.underconst);
+router.get('/bj_importance', ctrunderc.underconst);
+router.get('/bj_techniques', ctrunderc.underconst);
+router.get('/bj_continuous', ctrunderc.underconst);
+router.get('/bj_benefits', ctrunderc.underconst);
+router.get('/bj_summary', ctrunderc.underconst);
+router.get('/bj_vs', ctrunderc.underconst);
 
 // Quality
+router.get('/qual_intro', ctrQuality.qualintro);
+router.get('/qual_roles', ctrQuality.qualroles);
+router.get('/qual_defined', ctrQuality.qualdefined);
+router.get('/qual_acceptance', ctrQuality.qualacceptance);
+router.get('/qual_mgt', ctrQuality.qualmanagement);
+router.get('/qual_summary', ctrQuality.qualsummary);
+router.get('/qual_vs', ctrQuality.qualvs);
 
 // Change
+router.get('/chg_intro', ctrChange.chgIntro);
+router.get('/chg_roles', ctrChange.chgRoles);
+router.get('/chg_overview', ctrChange.chgOverview);
+router.get('/chg_change', ctrChange.chgChange);
+router.get('/chg_integrating', ctrChange.chgIntegration);
+router.get('/chg_portfolio', ctrChange.chgPortfolio);
+router.get('/chg_summary', ctrChange.chgSummary);
+router.get('/chg_vs', ctrChange.chgVersus);
 
 // Risks
 router.get('/risk_role', ctrRisk.roles);

@@ -1,0 +1,101 @@
+<%- include ../_header %>
+
+<h1 class="display-4"><%=title%></h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#planning"><%=planning.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#control"><%=control.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#pdca"><%=pdca.title%></a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="overview" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <% for (var i=0; i<overview.length; i++) { %>
+                        <p class="card-text"><%-overview[i]%></p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="tab-pane" id="planning" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <% for (var i=0; i<planning.comment.length; i++) { %>
+                            </p><%-planning.comment[i]%>
+                        <% } %>
+                    </div>
+					<div class="card card-block">
+                        <% for (var i=0; i<planning.integration.length; i++) { %>
+                            </p><%-planning.integration[i]%>
+                        <% } %>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+    <div class="tab-pane" id="control" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<control.comment.length; i++) { %>
+                                </p><%-control.comment[i]%>
+                            <% } %>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="tab-pane" id="pdca" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<pdca.comment.length; i++) { %>
+                                </p><%-pdca.comment[i]%>
+                            <% } %>
+                        </div>
+                    </div> 
+                </div>
+				
+				<div class="card card-block">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-pdca.image%>" alt="pdca">
+                                </div>
+                            </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</div>
+
+<%- include ../_footer %>
+

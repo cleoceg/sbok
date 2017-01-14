@@ -1,0 +1,122 @@
+<%- include ../_header %>
+
+<h1 class="display-4"><%=title%></h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#sprint">Sprint</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#standup">Daily Standup Meeting</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#planning">Sprint Planning Meeting</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#review">Sprint Review Meeting</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#retrospect">Retrospect Sprint Meeting</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="overview" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <% for (var i=0; i<overview.length; i++) { %>
+                        <p class="card-text"><%-overview[i]%></p>
+                    <% } %>
+                </div>
+				<div class="card card-block">
+					<div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+							<div class="col-sm-8">
+                                <div class="card card-block">
+                                    <img class="w-100" src="/<%-image%>" alt="self-organization">
+                                </div>
+                            </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="tab-pane" id="sprint" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+					<div class="card card-block">
+						<h4 class="card-title"><%-sprint.title%></h4>
+						<% for (var i=0; i<sprint.comment.length; i++) { %>
+							<p class="card-text"><%-sprint.comment[i]%></p>
+						<% } %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="tab-pane" id="standup" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+					<div class="card card-block">
+						<h4 class="card-title"><%-standup.title%></h4>
+						<% for (var i=0; i<standup.comment.length; i++) { %>
+							<p class="card-text"><%-standup.comment[i]%></p>
+						<% } %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="tab-pane" id="planning" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+					<div class="card card-block">
+						<h4 class="card-title"><%-planning.title%></h4>
+						<% for (var i=0; i<planning.comment.length; i++) { %>
+							<p class="card-text"><%-planning.comment[i]%></p>
+						<% } %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="tab-pane" id="review" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+					<div class="card card-block">
+						<h4 class="card-title"><%-review.title%></h4>
+						<% for (var i=0; i<review.comment.length; i++) { %>
+							<p class="card-text"><%-review.comment[i]%></p>
+						<% } %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="tab-pane" id="retrospect" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+					<div class="card card-block">
+						<h4 class="card-title"><%-retrospect.title%></h4>
+						<% for (var i=0; i<retrospect.comment.length; i++) { %>
+							<p class="card-text"><%-retrospect.comment[i]%></p>
+						<% } %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ../_footer %>
+

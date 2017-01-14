@@ -51,13 +51,13 @@ router.get('/noncore', ctrunderc.underconst);
 // Business Justification
 router.get('/bj_intro', ctrBJ.bjIntro);
 router.get('/bj_roles', ctrBJ.bjRole);
-router.get('/bj_vdd', ctrunderc.underconst);
-router.get('/bj_importance', ctrunderc.underconst);
-router.get('/bj_techniques', ctrunderc.underconst);
+router.get('/bj_vdd', ctrBJ.bjVdd);
+router.get('/bj_importance', ctrBJ.bjImportance);
+router.get('/bj_techniques', ctrBJ.bjTechnique);
 router.get('/bj_continuous', ctrunderc.underconst);
 router.get('/bj_benefits', ctrunderc.underconst);
-router.get('/bj_summary', ctrunderc.underconst);
-router.get('/bj_vs', ctrunderc.underconst);
+router.get('/bj_summary', ctrBJ.bjSummary);
+router.get('/bj_vs', ctrBJ.bjVersus);
 
 // Quality
 router.get('/qual_intro', ctrQuality.qualintro);

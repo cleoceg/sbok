@@ -17,3 +17,50 @@ var renderRole = function (req, res) {
 module.exports.bjRole = function (req, res) {
     renderRole(req, res);
 };
+
+// Business Justification VDD
+var renderVdd = function (req, res) {
+    res.render('bj/vdd', txtJustif.txtVdd);
+};
+
+module.exports.bjVdd = function (req, res) {
+    renderVdd(req, res);
+};
+
+// Business Justification importance
+var renderImportance = function (req, res) {
+    res.render('bj/importance', txtJustif.txtImportance);
+};
+
+module.exports.bjImportance = function (req, res) {
+    renderImportance(req, res);
+};
+
+// Business Justification technique
+var renderTechnique = function (req, res) {
+    res.render('bj/technique', txtJustif.txtTechnique);
+};
+
+module.exports.bjTechnique = function (req, res) {
+    renderTechnique(req, res);
+};
+
+
+
+// Business Justification summary
+var renderSummary = function (req, res) {
+    res.render('bj/summary', txtJustif.txtSummary);
+};
+
+module.exports.bjSummary = function (req, res) {
+    renderSummary(req, res);
+};
+
+// Business Justification versus
+var renderVersus = function (req, res) {
+    res.render('bj/versus', txtJustif.txtVersus);
+};
+
+module.exports.bjVersus = function (req, res) {
+    renderVersus(req, res);
+};

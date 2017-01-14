@@ -1,0 +1,161 @@
+<%- include ../_header %>
+
+<h1 class="display-4"><%=title%></h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview"><%-overview.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#estimation"><%-estimation.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#planning"><%-planning.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#ranking"><%-ranking.title%></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#story"><%-story.title%></a>
+  </li>
+ </ul>
+
+ <div class="tab-content">
+
+    <div class="tab-pane active" id="overview" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<% for (var i=0; i<overview.comment.length; i++) { %>
+                            <p class="card-text"><%-overview.comment[i]%></p>
+			<% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tab-pane" id="estimation" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<% for (var i=0; i<estimation.comment.length; i++) { %>
+                            <p class="card-text"><%-estimation.comment[i]%></p>
+			<% } %>
+                    </div>
+                    <div class="card card-block">
+                        <h4 class="card-title"><%-estimation.roi.title%></h4>
+			<% for (var i=0; i<estimation.roi.comment.length; i++) { %>
+                            <p class="card-text"><%-estimation.roi.comment[i]%></p>
+			<% } %>
+                        <div class="card card-block bg-faded">
+                            <h4 class="card-title">Example</h4>
+                                <% for (var i=0; i<estimation.roi.example.length; i++) { %>
+                                    <p class="card-text"><%-estimation.roi.example[i]%></p>
+                                <% } %>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-block">
+                        <h4 class="card-title"><%-estimation.npv.title%></h4>
+			<% for (var i=0; i<estimation.npv.comment.length; i++) { %>
+                            <p class="card-text"><%-estimation.npv.comment[i]%></p>
+			<% } %>
+                        <div class="card card-block bg-faded">
+                            <h4 class="card-title">Example</h4>
+                                <% for (var i=0; i<estimation.npv.example.length; i++) { %>
+                                    <p class="card-text"><%-estimation.npv.example[i]%></p>
+                                <% } %>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-block">
+                        <h4 class="card-title"><%-estimation.irr.title%></h4>
+			<% for (var i=0; i<estimation.irr.comment.length; i++) { %>
+                            <p class="card-text"><%-estimation.irr.comment[i]%></p>
+			<% } %>
+                        <div class="card card-block bg-faded">
+                            <h4 class="card-title">Example</h4>
+                                <% for (var i=0; i<estimation.irr.example.length; i++) { %>
+                                    <p class="card-text"><%-estimation.irr.example[i]%></p>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="tab-pane" id="planning" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<% for (var i=0; i<planning.comment.length; i++) { %>
+                            <p class="card-text"><%-planning.comment[i]%></p>
+			<% } %>
+                    </div>
+                    <div class="card card-block">
+                        <h4 class="card-title"><%-planning.value.title%></h4>
+			<% for (var i=0; i<planning.value.comment.length; i++) { %>
+                            <p class="card-text"><%-planning.value.comment[i]%></p>
+			<% } %>
+                    </div>
+                    <div class="card card-block">
+                        <h4 class="card-title"><%-planning.customer.title%></h4>
+			<% for (var i=0; i<planning.customer.comment.length; i++) { %>
+                            <p class="card-text"><%-planning.customer.comment[i]%></p>
+			<% } %>
+                    </div>
+                    <div class="card card-block">
+                    <div class="col-sm-12">
+			<div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+				<div class="card card-block">
+                                    <img class="w-100" src="/<%-planning.customer.image%>" alt="Kano Analysis">
+				</div>
+                            </div>
+			<div class="col-sm-2"></div>
+                    </div>
+		</div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="tab-pane" id="ranking" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<% for (var i=0; i<ranking.comment.length; i++) { %>
+                            <p class="card-text"><%-ranking.comment[i]%></p>
+			<% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="tab-pane" id="story" role="tabpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<% for (var i=0; i<story.comment.length; i++) { %>
+                            <p class="card-text"><%-story.comment[i]%></p>
+			<% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+ </div>
+
+<%- include ../_footer %>
+
+
+

@@ -12,7 +12,8 @@ var ctrRisk = require('../controllers//ctrrisk');
 var ctrPrinciples = require('../controllers/ctrprinciples');
 var ctrQuality = require('../controllers/ctrquality');
 var ctrChange = require('../controllers/ctrchange');
-var ctrBJ = require('../controllers/ctrjustification')
+var ctrBJ = require('../controllers/ctrjustification');
+var ctrOrg = require('../controllers/ctrorganization');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -43,10 +44,16 @@ router.get('/review', ctrreview.review);
 router.get('/processus/:id', ctrproc.display);
 
 // Organization
-router.get('/owner', ctrunderc.underconst);
-router.get('/master', ctrunderc.underconst);
-router.get('/team', ctrunderc.underconst);
-router.get('/noncore', ctrunderc.underconst);
+router.get('/org_intro', ctrOrg.orgIntro);
+router.get('/org_roles', ctrOrg.orgRoles);
+router.get('/org_project', ctrOrg.orgProject);
+router.get('/org_owner', ctrunderc.underconst);
+router.get('/org_master', ctrunderc.underconst);
+router.get('/org_team', ctrunderc.underconst);
+router.get('/org_portfolio', ctrunderc.underconst);
+router.get('/org_summary', ctrunderc.underconst);
+router.get('/org_versus', ctrunderc.underconst);
+router.get('/org_theories', ctrunderc.underconst);
 
 // Business Justification
 router.get('/bj_intro', ctrBJ.bjIntro);

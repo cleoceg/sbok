@@ -1,0 +1,108 @@
+<%- include ../_header %>
+
+<h1 class="display-4"><%=overview.title%></h1>
+
+<div class="col-sm-12">    
+    <div class="card card-block">
+        <% for (var i=0; i<overview.comment.length; i++) { %>
+            <p class="card-text"><%-overview.comment[i]%>
+        <% } %>
+    </div>
+    
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="tab" href="#eva"><%-eva.title%></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" href="#cfd"><%-cfd.title%></a>
+        </li>
+    </ul>
+    
+    <div class="tab-content">
+
+        <div class="tab-pane active" id="eva" role="tabpanel">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<eva.comment.length; i++) { %>
+                                <p class="card-text"><%-eva.comment[i]%></p>
+                            <% } %>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-block">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th col width="30%">Term Definition</th>
+                                    <th>Acronym</th>
+                                    <th>Formula</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+                                for (var i=0; i<eva.table.length; i++) {
+                                var item = eva.table[i]; %>
+                                <tr>
+                                    <th scope="row"><%=item.term%></th>
+                                    <td><%=item.acronym%></td>
+                                    <td><%=item.formula%></td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="card card-block">
+                        <div class="card card-block bg-faded">
+                            <% for (var i=0; i<eva.example.length; i++) { %>
+                                <p class="card-text"><%-eva.example[i]%></p>
+                            <% } %>
+                        </div>
+                        <div class="card card-block">
+                            <div class="col-sm-12">
+                                <div class="col-sm-2"></div>
+                                    <div class="col-sm-8">
+                                        <div class="card card-block">
+                                            <img class="w-100" src="/<%-eva.image%>" alt="BJ s-curve">
+                                        </div>
+                                    </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="cfd" role="tabpanel">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-block">
+                        <div class="card card-block">
+                            <% for (var i=0; i<cfd.comment.length; i++) { %>
+                                <p class="card-text"><%-cfd.comment[i]%></p>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="card card-block">
+                    <div class="col-sm-12">
+			<div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+				<div class="card card-block">
+                                    <img class="w-100" src="/<%-cfd.image%>" alt="BJ cfd">
+				</div>
+                            </div>
+			<div class="col-sm-2"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+<%- include ../_footer %>

@@ -190,6 +190,147 @@ var txtTechnique = {
     }
 };
 
+var txtContinuous = {
+    overview: {
+        title: 'Continuous Value Justification',
+        comment: [
+            'Business value should be assessed regularly to determine whether the justification or viability of executing the project continues to exist. Frequent assessment of investment in the project relative to business value being created qualifies the continued viability of a project. The expected requirements from the project may change frequently, which can impact both project investment and value creation. A key aspect of Scrum is its ability to quickly adjust to chaos created by a rapidly changing business model. In projects with ambiguous user requirements and significant potential for frequent changes, Scrum provides considerable advantages over other development models.',
+            'Monitoring the rate of delivering value is an important requirement for Scrum projects. Periodically tracking and reporting the creation of value assists in assessing project status and provides important information to the customer and other stakeholders.'
+        ]
+    },
+    eva: {
+        title: 'Earned Value Analysis',
+        comment: [
+            'Although commonly used, tools such as bar charts and Gantt Charts have limitations in tracking and reporting progress when it comes to project performance. Earned Value Analysis (EVA) is used for this purpose. ',
+            'EVA analyzes actual project performance against planned performance at a given point in time. For tracking techniques to be effective, the initial baseline project plan needs to be accurate. EVA often uses graphs and other visuals (e.g., S-curve), as a way to depict project status information.',
+            'Earned Value Analysis measures current variances in the project’s schedule and cost performance and forecasts the final cost based on the determined current performance. EVA is typically done at the end of each Sprint after the User Stories in Sprint Backlog are completed.',
+            'The table below, summarizes the formulas used in Earned Value Analysis.'
+        ],
+        table: [
+            {
+                term: 'Planned Value',
+                acronym: 'PV',
+                formula: ''
+            },
+            {
+                term: 'Earned Value',
+                acronym: 'EV',
+                formula: ''
+            },
+            {
+                term: 'Actual Cost',
+                acronym: 'AC',
+                formula: ''
+            },
+            {
+                term: 'Budget at Completion',
+                acronym: 'BAC',
+                formula: ''
+            },
+            {
+                term: 'Schedule Variance',
+                acronym: 'SV',
+                formula: 'EV - PV'
+            },
+            {
+                term: 'Cost Variance',
+                acronym: 'CV',
+                formula: 'EV - AC'
+            },
+            {
+                term: 'Schedule Performance Index',
+                acronym: 'SPI',
+                formula: 'EV / PV'
+            },
+            {
+                term: 'Cost Performance Index',
+                acronym: 'CPI',
+                formula: 'EV / AC'
+            },
+            {
+                term: 'Percent Complete',
+                acronym: '% Complete',
+                formula: '(EV / BAC) x 100'
+            },
+            {
+                term: 'Estimate at Completion',
+                acronym: 'EAC',
+                formula: ''
+            },
+            {
+                term: '1. Estimating assumptions not valid',
+                acronym: '',
+                formula: 'AC + ETC'
+            },
+            {
+                term: '2. Current Variances are atypical',
+                acronym: '',
+                formula: 'AC + BAC - EV'
+            },
+            {
+                term: '3. Current Variances are typical',
+                acronym: '',
+                formula: 'BAC / CP'
+            },
+            {
+                term: 'Estimate to Complete',
+                acronym: 'ETC',
+                formula: 'EAC - AC'
+            },
+            {
+                term: 'Variance at Completion',
+                acronym: 'VAC',
+                formula: 'BAC - EAC'
+            }
+        ],
+        example: [
+            '<b>Example:</b>',
+            'A website with 4,000 web pages needs to be developed—we assume that every web page takes the same time to complete, and that each web page is a unique User Story of equal priority in the Prioritized Product Backlog. The estimated cost of completing the project is $400,000 and the time limit for the project is 12 months. After 6 months, $300,000 has been spent and the work completed is 1,000 web pages.',
+            'What have we been provided with?',
+            '•	Budget at Completion (BAC) = $400,000 (Cost Baseline for the project)',
+            '•	Planned Value (PV) = $200,000 (since we planned to complete 2,000 web pages)',
+            '•	Earned Value (EV) = $100,000 (value of 1,000 web pages that are complete)',
+            '•	Actual Cost (AC) = $300,000 (what has been spent so far)',
+            '<b>Formulas:</b>',
+            '•	Schedule Variance (SV) = EV - PV = $100,000 - $200,000 = - $100,000',
+            '•	Cost Variance (CV) = EV - AC = $100,000 - $300,000 = - $200,000',
+            'o	The negative variances in our project indicate that we are behind schedule and over budget.',
+            '•	Schedule Performance Index (SPI) = EV / PV = $100,000 / $200,000 = 0.5',
+            'o	SPI < 1 indicates that the work completed so far is only 50% of what we planned to have completed at 6 months.',
+            '•	Cost Performance Index (CPI) = EV / AC = $100,000 / $300,000 = 0.33',
+            'o	CPI < 1 indicates that we are only getting 33% of work done for the amount of money being spent.',
+            '•	Percent Complete = EV / BAC x 100 = $100,000 / $400,000 x 100 = 25%',
+            'o	So, 25% of the work on the project is complete at this point in time.',
+            '<b>S-curve</b> for the data:'
+        ],
+        image: '../images/s_curve.png'
+    },
+    cfd: {
+        title: 'Cumulative Flow Diagram (CFD)',
+        comment: [
+            'A Cumulative Flow Diagram (CFD) is a useful tool for reporting and tracking project performance. It provides a simple, visual representation of project progress at a particular point in time. It is usually used to provide a higher level status of the overall project and not daily updates for individual Sprints.',
+            'the figure below is an example of a CFD for a large project. It shows how many User Stories are yet to be created, in process of being created, and have been created. As customer requirements change, there is a change in the Cumulative User Stories which have to be delivered. Change points 1 and 2 are where the Product Owner removed existing user Stories in the Risk Adjusted Prioritized Product Backlog and Change points 3 and 4 are where the Product Owner added new User Stories in the Risk Adjusted Prioritized Product Backlog',
+            'This type of diagram can be a great tool for identifying roadblocks and bottlenecks within processes. For example, if the diagram shows one band becoming narrower while the previous band is becoming wider over time, there may be a bottleneck and changes may be needed to increase efficiency and/or improve project performance.'
+        ],
+        image: '../images/cfd.png'
+    }
+};
+
+var txtBenefits = {
+    title: 'Confirm Benefits Realization',
+    comment: [
+        'Throughout a project, it is important to verify whether benefits are being realized. Whether the products of a Scrum project are tangible or intangible, appropriate verification techniques are required to confirm that the team is creating the deliverables that will achieve the benefits and value defined at the beginning of the project.'
+    ],
+    prototype: {
+        title: 'Prototypes, Simulations, and Demonstrations',
+        comment: [
+            'Demonstrating prototypes to customers and simulating their functionalities are commonly used techniques for confirming value.',
+            'Often, after using the features or having them demonstrated, customers can more clearly determine whether the features are adequate and suitable for their needs. They might realize a need for additional features, or may decide to modify previously defined feature requirements. In product development, this customer experience has come to be known as IKIWISI (I’ll Know It When I See It).',
+            'Through demonstrations or access to early iterations, customers can also evaluate to what degree the team has successfully interpreted their requirements and met their expectations.'
+        ]
+    }
+};
+
 var txtSummary = {
     title: 'Business Justification: Summary of Responsibilities',
     table: [
@@ -277,5 +418,7 @@ exports.txtRole = txtRole;
 exports.txtVdd = txtVdd;
 exports.txtImportance = txtImportance;
 exports.txtTechnique = txtTechnique;
+exports.txtContinuous = txtContinuous;
+exports.txtBenefits = txtBenefits;
 exports.txtVersus = txtVersus;
 exports.txtSummary = txtSummary;

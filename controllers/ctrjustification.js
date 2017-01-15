@@ -45,7 +45,23 @@ module.exports.bjTechnique = function (req, res) {
     renderTechnique(req, res);
 };
 
+// Business Justification Continuous Value
+var renderContinuous = function (req, res) {
+    res.render('bj/continuous', txtJustif.txtContinuous);
+};
 
+module.exports.bjContinuous = function (req, res) {
+    renderContinuous(req, res);
+};
+
+// Business Justification Continuous Value
+var renderBenefits = function (req, res) {
+    res.render('bj/benefits', txtJustif.txtBenefits);
+};
+
+module.exports.bjBenefits = function (req, res) {
+    renderBenefits(req, res);
+};
 
 // Business Justification summary
 var renderSummary = function (req, res) {

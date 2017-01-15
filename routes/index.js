@@ -54,8 +54,8 @@ router.get('/bj_roles', ctrBJ.bjRole);
 router.get('/bj_vdd', ctrBJ.bjVdd);
 router.get('/bj_importance', ctrBJ.bjImportance);
 router.get('/bj_techniques', ctrBJ.bjTechnique);
-router.get('/bj_continuous', ctrunderc.underconst);
-router.get('/bj_benefits', ctrunderc.underconst);
+router.get('/bj_continuous', ctrBJ.bjContinuous);
+router.get('/bj_benefits', ctrBJ.bjBenefits);
 router.get('/bj_summary', ctrBJ.bjSummary);
 router.get('/bj_vs', ctrBJ.bjVersus);
 

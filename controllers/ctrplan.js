@@ -7,7 +7,7 @@ var txtPlan = {
  };
 
 var renderPlan = function (req, res) {
-    res.render('phase', txtPlan);
+    res.render('phases/phase', txtPlan);
  };
  
  module.exports.plan = function (req, res) {

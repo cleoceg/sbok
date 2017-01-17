@@ -281,7 +281,7 @@ var txtPortfolio = {
  
 var txtVs = {
     title: 'Scrum vs. Traditional Project Management',
-    intro: [
+    comment: [
         'Scrum and most of the traditional project management methods define risk as ‘uncertain event(s) that could positively or negatively affect the achievement of project objectives.’ Also, risks are identified, assessed, planned for, and communicated continually.',
         'In Traditional project management models, there is emphasis on detailed upfront planning to identify, assess, and determine risk responses for all project risks. During project execution, any project team member can identify risks and the project manager or the project management office or project support staff can update them in the Risk Log or Risk Register. The project manager regularly monitors and controls all risks and usually identifies specific individuals in the team to take responsibility for different aspects of risks.',
         'In Scrum, any Scrum Team member can identify risks and the Product Owner can update the identified risks in the Risk Adjusted Prioritized Product Backlog. The Scrum principles of Empirical Process Control and Iterative Development enable the Scrum Team to constantly keep identifying risks and adding them to the Prioritized Product Backlog, where such risks are prioritized with other existing User Stories in the backlog, to be mitigated in subsequent Sprints. The Scrum Team has collective responsibilities for managing all risks for the Sprint.'

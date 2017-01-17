@@ -2,7 +2,7 @@ var txtJustif = require('../model/justification');
 
 // Business Justification Intro
 var renderIntro = function (req, res) {
-    res.render('bj/intro', txtJustif.txtIntro);
+    res.render('base', txtJustif.txtIntro);
 };
 
 module.exports.bjIntro = function (req, res) {
@@ -11,7 +11,7 @@ module.exports.bjIntro = function (req, res) {
 
 // Business Justification Role
 var renderRole = function (req, res) {
-    res.render('bj/role', txtJustif.txtRole);
+    res.render('base', txtJustif.txtRole);
 };
 
 module.exports.bjRole = function (req, res) {
@@ -74,7 +74,7 @@ module.exports.bjSummary = function (req, res) {
 
 // Business Justification versus
 var renderVersus = function (req, res) {
-    res.render('bj/versus', txtJustif.txtVersus);
+    res.render('base', txtJustif.txtVersus);
 };
 
 module.exports.bjVersus = function (req, res) {

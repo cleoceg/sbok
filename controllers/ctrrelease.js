@@ -8,7 +8,7 @@ var procs = require('../model/processes')
  };
 
 var renderRelease = function (req, res) {
-    res.render('phase', txtRelease);
+    res.render('phases/phase', txtRelease);
  };
  
  module.exports.release = function (req, res) {

@@ -7,7 +7,7 @@ var txtReview = {
  };
 
 var renderReview = function (req, res) {
-    res.render('phase', txtReview);
+    res.render('phases/phase', txtReview);
  };
  
  module.exports.review = function (req, res) {

@@ -2,7 +2,7 @@ var txtQuality = require('../model/quality');
 
 // Quality introduction 
 var renderIntro = function (req, res) {
-    res.render('quality/intro', txtQuality.txtIntroduction);
+    res.render('base', txtQuality.txtIntroduction);
  };
 
  module.exports.qualintro = function (req, res) {
@@ -11,7 +11,7 @@ var renderIntro = function (req, res) {
 
 // Quality roles 
 var renderRoles = function (req, res) {
-    res.render('quality/roles', txtQuality.txtRoles);
+    res.render('base', txtQuality.txtRoles);
  };
 
  module.exports.qualroles = function (req, res) {
@@ -56,7 +56,7 @@ var renderSummary = function (req, res) {
 
 // Quality versus
 var renderVersus = function (req, res) {
-    res.render('quality/versus', txtQuality.txtVs);
+    res.render('base', txtQuality.txtVs);
  };
 
  module.exports.qualvs = function (req, res) {

@@ -68,7 +68,7 @@ var renderSummary = function (req, res) {
 
 // vs
 var renderVs = function (req, res) {
-    res.render('risks/vs', txtRisk.txtvs);
+    res.render('base', txtRisk.txtvs);
  };
 
  module.exports.vs = function (req, res) {

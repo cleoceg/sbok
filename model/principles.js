@@ -12,13 +12,9 @@ var txtIntroduction = {
     ]
 };
 
-var txtEpc = {
-    title: 'Empirical Process Control',
-    introduction: [
-        'In Scrum, decisions are made based on observation and experimentation rather than on detailed upfront planning. Empirical process control relies on the three main ideas of transparency, inspection, and adaptation.'
-    ],
-    Transparency: {
-        comment: [
+var Transparency = {
+	title: 'Transparency',
+    comment: [
         'Transparency allows all facets of any Scrum process to be observed by anyone. This promotes an easy and transparent flow of information throughout the organization and creates an open work culture. In Scrum, transparency is depicted through the following:',
         '•	A Project Vision Statement which can be viewed by all stakeholders and the Scrum Team',
         '•	An open Prioritized Product Backlog with prioritized User Stories that can be viewed by everyone, both within and outside the Scrum Team',
@@ -26,9 +22,16 @@ var txtEpc = {
         '•	Clear visibility into the team’s progress through the use of a Scrumboard, Burndown Chart, and other information radiators',
         '•	Daily Standup Meetings conducted during the Conduct Daily Standup process, in which all team members report what they have done the previous day, what they plan to do today, and any problems preventing them from completing their tasks in the current Sprint',
         '•	Sprint Review Meetings conducted during the Demonstrate and Validate Sprint process, in which the Scrum Team demonstrates the potentially shippable Sprint Deliverables to the Product Owner and Stakeholders'
-        ],
-        image: '../images/transparency.png'
-    },
+    ],
+    image: '../images/transparency.png'
+};
+
+var txtEpc = {
+    title: 'Empirical Process Control',
+    introduction: [
+        'In Scrum, decisions are made based on observation and experimentation rather than on detailed upfront planning. Empirical process control relies on the three main ideas of transparency, inspection, and adaptation.'
+    ],
+    Transparency: Transparency,
     Inspection: {
         comment: [
             'Inspection in Scrum is depicted through the following:',
@@ -201,7 +204,7 @@ txtIterative = {
 
 txtVs = {
 	title: 'Scrum vs. Traditional Project Management',
-	overview: [
+	comment: [
 		'The emphasis in traditional Project Management is to conduct detailed upfront planning for the project with emphasis on fixing the scope, cost, and schedule and managing those parameters. Traditional project management may at times lead to a situation where the plan has succeeded yet the customer is not satisfied.',
 		'The Scrum Framework is founded on the belief that the knowledge workers of today can offer much more than just their technical expertise, and that trying to fully map out and plan for an ever-changing environment is not efficient. Therefore, Scrum encourages data-based, iterative decision making. In Scrum, the primary focus is on delivering products that satisfy customer requirements in small iterative shippable increments.',
 		'To deliver the greatest amount of value in the shortest amount of time, Scrum promotes prioritization and Time-boxing over fixing the scope, cost and schedule of a project. An important feature of Scrum is selforganization, which allows the individuals who are actually doing the work to estimate and take ownership of tasks.'

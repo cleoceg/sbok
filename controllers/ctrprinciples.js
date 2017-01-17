@@ -2,7 +2,7 @@ var txtPrinciples = require('../model/principles');
 
 // roles guide
 var renderIntro = function (req, res) {
-    res.render('principles/intro', txtPrinciples.txtIntroduction);
+    res.render('base', txtPrinciples.txtIntroduction);
  };
 
  module.exports.intro = function (req, res) {
@@ -65,7 +65,7 @@ var renderIterative = function (req, res) {
 
 // versus
 var renderVs = function (req, res) {
-    res.render('principles/principles_vs', txtPrinciples.txtVs);
+    res.render('base', txtPrinciples.txtVs);
  };
 
  module.exports.vs = function (req, res) {

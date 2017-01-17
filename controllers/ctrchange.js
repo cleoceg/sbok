@@ -2,7 +2,7 @@ var txtChange = require('../model/change');
 
 // Change introduction 
 var renderIntro = function (req, res) {
-    res.render('changes/intro', txtChange.txtIntroduction);
+    res.render('base', txtChange.txtIntroduction);
  };
 
  module.exports.chgIntro = function (req, res) {
@@ -11,7 +11,7 @@ var renderIntro = function (req, res) {
 
 // Change roles
 var renderRoles = function (req, res) {
-    res.render('changes/roles', txtChange.txtRoles);
+    res.render('base', txtChange.txtRoles);
  };
 
  module.exports.chgRoles = function (req, res) {
@@ -65,7 +65,7 @@ var renderSummary = function (req, res) {
 
 // Change versus
 var renderVersus = function (req, res) {
-    res.render('changes/versus', txtChange.txtVersus);
+    res.render('base', txtChange.txtVersus);
  };
 
  module.exports.chgVersus = function (req, res) {

@@ -7,7 +7,7 @@ var txtImplement = {
  };
 
 var renderImplement = function (req, res) {
-    res.render('initiate', txtImplement);
+    res.render('phases/phase', txtImplement);
  };
  
  module.exports.implement = function (req, res) {

@@ -25,14 +25,14 @@ router.get('/about', function(req, res) {
 });
 
 // principles
-router.get('/intro', ctrPrinciples.intro);
-router.get('/epc', ctrPrinciples.epc);
-router.get('/selforg', ctrPrinciples.selforg);
-router.get('/collaboration', ctrPrinciples.collaboration);
-router.get('/valuebased', ctrPrinciples.valuebased);
-router.get('/timeboxing', ctrPrinciples.timeboxing);
-router.get('/iterative', ctrPrinciples.iterative);
-router.get('/principles_vs', ctrPrinciples.vs);
+//router.get('/intro', ctrPrinciples.intro);
+//router.get('/epc', ctrPrinciples.epc);
+//router.get('/selforg', ctrPrinciples.selforg);
+//router.get('/collaboration', ctrPrinciples.collaboration);
+//router.get('/valuebased', ctrPrinciples.valuebased);
+//router.get('/timeboxing', ctrPrinciples.timeboxing);
+//router.get('/iterative', ctrPrinciples.iterative);
+//router.get('/principles_vs', ctrPrinciples.vs);
 
 // Phases
 router.get('/phases', ctrphases.phases);
@@ -47,13 +47,13 @@ router.get('/processus/:id', ctrproc.display);
 router.get('/org_intro', ctrOrg.orgIntro);
 router.get('/org_roles', ctrOrg.orgRoles);
 router.get('/org_project', ctrOrg.orgProject);
-router.get('/org_owner', ctrunderc.underconst);
-router.get('/org_master', ctrunderc.underconst);
-router.get('/org_team', ctrunderc.underconst);
-router.get('/org_portfolio', ctrunderc.underconst);
-router.get('/org_summary', ctrunderc.underconst);
-router.get('/org_versus', ctrunderc.underconst);
-router.get('/org_theories', ctrunderc.underconst);
+router.get('/org_owner', ctrOrg.orgOwner);
+router.get('/org_master', ctrOrg.orgMaster);
+router.get('/org_team', ctrOrg.orgTeam);
+router.get('/org_portfolio', ctrOrg.orgPortfolio);
+router.get('/org_summary', ctrOrg.orgSummary);
+router.get('/org_versus', ctrOrg.orgVersus);
+router.get('/org_theories', ctrOrg.orgTheories);
 
 // Business Justification
 router.get('/bj_intro', ctrBJ.bjIntro);

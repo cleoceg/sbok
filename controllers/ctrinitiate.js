@@ -7,7 +7,7 @@ var txtInitiate = {
  };
 
 var renderInitiate = function (req, res) {
-    res.render('phase', txtInitiate);
+    res.render('phases/phase', txtInitiate);
  };
  
  module.exports.initiate = function (req, res) {

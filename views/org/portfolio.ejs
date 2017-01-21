@@ -4,118 +4,45 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" role="tab" href="#definition"><%-definition.title%></a>
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#<%-definition.stitle%>"><%-definition.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#project"><%-project.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%-project.stitle%>"><%-project.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#portfolio"><%-portfolio.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%-portfolio.stitle%>"><%-portfolio.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#involvement"><%-involvement.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%-involvement.stitle%>"><%-involvement.title%></a>
   </li>
 </ul>
 
 <div class="tab-content">
 
-    <div class="tab-pane active" id="definition" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-						<% for (var i=0; i<definition.comment.length; i++) { %>
-                            <p class="card-text"><%-definition.comment[i]%></p>
-						<% } %>
-                    </div>
-					<div class="card card-block">
-						<% for (var i=0; i<definition.examples.length; i++) { %>
-							<div class="card card-block bg-faded">
-								<h4 class="card-title"><%-definition.examples[i].title%></h4>
-								<% for (var j=0; j<definition.examples[i].comment.length; j++) { %>
-									<p class="card-text"><%-definition.examples[i].comment[j]%></p>
-								<% } %>
-							</div>
-						<% } %>
-					</div>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane active" id="<%-definition.stitle%>" role="tabpanel">
+		<% var data = definition; %>
+		<%- include ../_paragraphe.ejs %>
+		<% for (var i=0; i<definition.examples.length; i++) { %>
+			<% var data = definition.examples[i]; %>
+			<%- include ../_example.ejs %>
+		<% } %>
     </div>
     
-    <div class="tab-pane" id="project" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-			<% for (var i=0; i<project.comment.length; i++) { %>
-                            <p class="card-text"><%-project.comment[i]%></p>
-			<% } %>
-                    </div>
-                    <div class="card card-block">
-			<% for (var i=0; i<project.sos.length; i++) { %>
-                            <p class="card-text"><%-project.sos[i]%></p>
-			<% } %>
-                    </div>
-                </div>
-                <div class="card card-block">
-                    <div class="col-sm-12">
-			<div class="col-sm-2"></div>
-                            <div class="col-sm-8">
-				<div class="card card-block">
-                                    <img class="w-100" src="/<%-project.image%>" alt="Org project">
-				</div>
-                            </div>
-			<div class="col-sm-2"></div>
-                    </div>
-		</div>
-            </div>
-        </div>
+    <div class="tab-pane" id="<%-project.stitle%>" role="tabpanel">
+		<% var data = project; %>
+		<%- include ../_paraUneImage.ejs %>
+		<% var data = project.sos; %>
+		<%- include ../_paragraphe.ejs %>
     </div>
     
-    <div class="tab-pane" id="portfolio" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <% for (var i=0; i<portfolio.comment.length; i++) { 
-                        item = portfolio.comment[i]; %>
-                    <div class="card card-block">
-						<h4 class="card-title"><%-item.title%></h4>
-						<% for (var j=0; j<item.comment.length; j++) { %>
-                            <p class="card-text"><%-item.comment[j]%></p>
-						<% } %>
-						<% if (typeof item.image != 'undefined')  { %>
-							<div class="card card-block">
-								<div class="col-sm-12">
-									<div class="col-sm-2"></div>
-									<div class="col-sm-8">
-										<div class="card card-block">
-											<img class="w-100" src="/<%-item.image%>" alt="Org project">
-										</div>
-									</div>
-									<div class="col-sm-2"></div>
-								</div>
-							</div>
-						<% } %>
-					</div>
-					<% } %>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane" id="<%-portfolio.stitle%>" role="tabpanel">
+		<% var data = portfolio; %>
+		<%- include ../_someParaUneImage.ejs %>
     </div>
     
-    <div class="tab-pane" id="involvement" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-			<% for (var i=0; i<involvement.comment.length; i++) { %>
-                            <p class="card-text"><%-involvement.comment[i]%></p>
-			<% } %>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane" id="<%-involvement.stitle%>" role="tabpanel">
+        <% var data = involvement; %>
+		<%- include ../_paragraphe.ejs %>
     </div>
     
 </div>

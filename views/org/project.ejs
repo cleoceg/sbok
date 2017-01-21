@@ -4,47 +4,34 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview"><%-overview.title%></a>
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#<%-overview.title%>"><%-overview.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#core"><%-core.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%-core.stitle%>"><%-core.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#noncore"><%-noncore.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%-noncore.stitle%>"><%-noncore.title%></a>
   </li>
  </ul>
 
 <div class="tab-content">
 
-    <div class="tab-pane active" id="overview" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-			<% for (var i=0; i<overview.comment.length; i++) { %>
-                            <p class="card-text"><%-overview.comment[i]%></p>
-			<% } %>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane active" id="<%-overview.title%>" role="tabpanel">
+		<% var data = overview; %>
+		<%- include ../_paragraphe.ejs %>
     </div>
     
-    <div class="tab-pane" id="core" role="tabpanel">
+    <div class="tab-pane" id="<%-core.stitle%>" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
                     <div class="card card-block">
-			<% for (var i=0; i<core.comment.length; i++) { %>
+						<% for (var i=0; i<core.comment.length; i++) { %>
                             <p class="card-text"><%-core.comment[i]%></p>
-			<% } %>
+						<% } %>
                         <% for (var j=0; j<core.roles.length; j++) { %>
-                            <div class="card card-block">
-                                <h4 class=""><%-core.roles[j].title%></h4>
-                                <% for (var k=0; k<core.roles[j].comment.length; k++) { %>
-                                    <p class="card-text"><%-core.roles[j].comment[k]%></p>
-                                <% } %> 
-                            </div>
+							<% var data = core.roles[j]; %>
+							<%- include ../_paragraphe.ejs %>
                         <% } %>    
                     </div>
                 </div>
@@ -63,21 +50,18 @@
         </div>
     </div>
     
-    <div class="tab-pane" id="noncore" role="tabpanel">
+    <div class="tab-pane" id="<%-noncore.stitle%>" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
                     <div class="card card-block">
-			<% for (var i=0; i<noncore.comment.length; i++) { %>
+						<% for (var i=0; i<noncore.comment.length; i++) { %>
                             <p class="card-text"><%-noncore.comment[i]%></p>
-			<% } %>
+						<% } %>
+						
                         <% for (var j=0; j<noncore.roles.length; j++) { %>
-                            <div class="card card-block">
-                                <h4 class=""><%-noncore.roles[j].title%></h4>
-                                <% for (var k=0; k<noncore.roles[j].comment.length; k++) { %>
-                                    <p class="card-text"><%-noncore.roles[j].comment[k]%></p>
-                                <% } %> 
-                            </div>
+							<% var data = noncore.roles[j]; %>
+							<%- include ../_paragraphe.ejs %>
                         <% } %>  
                     </div>
                 </div>

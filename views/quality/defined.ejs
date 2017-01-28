@@ -4,59 +4,30 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#<%=overview.title%>"><%=overview.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#scope"><%=scope.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=scope.stitle%>"><%=scope.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#value"><%=value.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=value.stitle%>"><%=value.title%></a>
   </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active" id="overview" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <% for (var i=0; i<overview.length; i++) { %>
-                        <p class="card-text"><%-overview[i]%></p>
-                    <% } %>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane active" id="<%=overview.title%>" role="tabpanel">
+		<% var data = overview; %>
+		<%-include ../_paragraphe.ejs %>
     </div>
-    <div class="tab-pane" id="scope" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-                        <% for (var i=0; i<scope.comment.length; i++) { %>
-                            </p><%-scope.comment[i]%>
-                        <% } %>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
+    <div class="tab-pane" id="<%=scope.stitle%>" role="tabpanel">
+        <% var data = scope; %>
+		<%-include ../_paragraphe.ejs %>
     </div>
    
-    <div class="tab-pane" id="value" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-                        <div class="card card-block">
-                            <% for (var i=0; i<value.comment.length; i++) { %>
-                                </p><%-value.comment[i]%>
-                            <% } %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane" id="<%=value.stitle%>" role="tabpanel">
+        <% var data = value; %>
+		<%-include ../_paragraphe.ejs %>
     </div>
 </div>
 

@@ -1,73 +1,56 @@
-var txtPrinciples = require('../model/principles');
+var api = require('./ctrCommon') ;
 
-// roles guide
-var renderIntro = function (req, res) {
-    res.render('base', txtPrinciples.txtIntroduction);
- };
+var apiOptions = api.apiOptions;
+var renderScreen = api.renderScreen;
 
- module.exports.intro = function (req, res) {
-    renderIntro(req, res);
+var referral = {
+	intro: ['base','/prin_intro'],
+	epc: ['principles/epc','/prin_epc'],
+	org: ['principles/selforg','/prin_selforg'],
+	collab: ['principles/collab', '/prin_collab'],
+	vb: ['principles/valuebased', '/prin_vb'],
+	timebox: ['principles/timeboxing', '/prin_timebox'],
+	iter: ['principles/iterative', '/prin_iterative'],
+	vs: ['base', '/prin_vs']
 };
 
-// EPC
-var renderEpc = function (req, res) {
-    res.render('principles/epc', txtPrinciples.txtEpc);
- };
+// Introduction
+ module.exports.intro = function (req, res) {
+    renderScreen(req, res, referral.intro[0], referral.intro[1]);
+};
 
- module.exports.epc = function (req, res) {
-    renderEpc(req, res);
+//EPC
+module.exports.epc = function (req, res) {
+    //renderEpc(req, res);
+	renderScreen(req, res, referral.epc[0], referral.epc[1]);
 };
 
 // Self-Organization
-var renderSelforg = function (req, res) {
-    res.render('principles/selforg', txtPrinciples.txtSelforg);
- };
-
- module.exports.selforg = function (req, res) {
-    renderSelforg(req, res);
+module.exports.selforg = function (req, res) {
+	renderScreen(req, res, referral.org[0], referral.org[1]);
 };
 
 // Collaboration
-var renderCollabo = function (req, res) {
-    res.render('principles/collab', txtPrinciples.txtCollaboration);
- };
-
- module.exports.collaboration = function (req, res) {
-    renderCollabo(req, res);
+module.exports.collaboration = function (req, res) {
+	renderScreen(req, res, referral.collab[0], referral.collab[1]);
 };
 
 // value-based
-var renderValueBased = function (req, res) {
-    res.render('principles/valuebased', txtPrinciples.txtValueBased);
- };
-
- module.exports.valuebased = function (req, res) {
-    renderValueBased(req, res);
+module.exports.valuebased = function (req, res) {
+	renderScreen(req, res, referral.vb[0], referral.vb[1]);
 };
 
 // timeboxing
-var renderTimeBoxing = function (req, res) {
-    res.render('principles/timeboxing', txtPrinciples.txtTimeBoxing);
- };
-
- module.exports.timeboxing = function (req, res) {
-    renderTimeBoxing(req, res);
+module.exports.timeboxing = function (req, res) {
+    renderScreen(req, res, referral.timebox[0], referral.timebox[1]);
 };
 
 // iterative
-var renderIterative = function (req, res) {
-    res.render('principles/iterative', txtPrinciples.txtIterative);
- };
-
- module.exports.iterative = function (req, res) {
-    renderIterative(req, res);
+module.exports.iterative = function (req, res) {
+    renderScreen(req, res, referral.iter[0], referral.iter[1]);
 };
 
 // versus
-var renderVs = function (req, res) {
-    res.render('base', txtPrinciples.txtVs);
- };
-
- module.exports.vs = function (req, res) {
-    renderVs(req, res);
+module.exports.vs = function (req, res) {
+    renderScreen(req, res, referral.vs[0], referral.vs[1]);
 };

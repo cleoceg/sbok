@@ -1,91 +1,69 @@
-var txtOrganization = require('../model/organization');
+var api = require('./ctrCommon') ;
 
-// Organization Intro
-var renderIntro = function (req, res) {
-    res.render('base', txtOrganization.txtIntro);
+var apiOptions = api.apiOptions;
+var renderScreen = api.renderScreen;
+
+// couple Screen - Route
+var referral = {
+	intro: ['base','/org_intro'],
+	roles: ['base','/org_roles'],
+	project: ['org/project','/org_project'],
+	owner: ['org/owner','/org_owner'],
+	master: ['org/master','/org_master'],
+	team: ['org/team','/org_team'],
+	portfolio: ['org/portfolio','/org_portfolio'],
+	sum: ['org/summary','/org_sum'],
+	vs: ['base','/org_vs'],
+	theories: ['org/theories','/org_theories']
 };
 
+// Organization Intro
 module.exports.orgIntro = function (req, res) {
-    renderIntro(req, res);
+    renderScreen(req, res, referral.intro[0], referral.intro[1]);
+	//res.render(referral.intro[0]);
 };
 
 // Organization Roles guide
-var renderRoles = function (req, res) {
-    res.render('base', txtOrganization.txtRoles);
-};
-
 module.exports.orgRoles = function (req, res) {
-    renderRoles(req, res);
+    renderScreen(req, res, referral.roles[0], referral.roles[1]);
 };
 
 // Organization Project Roles
-var renderProject = function (req, res) {
-    res.render('org/project', txtOrganization.txtProject);
-};
-
 module.exports.orgProject = function (req, res) {
-    renderProject(req, res);
+    renderScreen(req, res, referral.project[0], referral.project[1]);
 };
 
 // Organization Product Owner
-var renderOwner = function (req, res) {
-    res.render('org/owner', txtOrganization.txtOwner);
-};
-
 module.exports.orgOwner = function (req, res) {
-    renderOwner(req, res);
+    renderScreen(req, res, referral.owner[0], referral.owner[1]);
 };
 
 // Organization Scrum Master
-var renderMaster = function (req, res) {
-    res.render('org/master', txtOrganization.txtMaster);
-};
-
 module.exports.orgMaster = function (req, res) {
-    renderMaster(req, res);
+    renderScreen(req, res, referral.master[0], referral.master[1]);
 };
 
 // Organization Scrum Team
-var renderTeam = function (req, res) {
-    res.render('org/team', txtOrganization.txtTeam);
-};
-
 module.exports.orgTeam = function (req, res) {
-    renderTeam(req, res);
+    renderScreen(req, res, referral.team[0], referral.team[1]);
 };
 
 // Organization Portfolio
-var renderPortfolio = function (req, res) {
-    res.render('org/portfolio', txtOrganization.txtPortfolio);
-};
-
 module.exports.orgPortfolio = function (req, res) {
-    renderPortfolio(req, res);
+    renderScreen(req, res, referral.portfolio[0], referral.portfolio[1]);
 };
 
 // Organization Summary
-var renderSummary = function (req, res) {
-    res.render('org/summary', txtOrganization.txtSummary);
-};
-
 module.exports.orgSummary = function (req, res) {
-    renderSummary(req, res);
+    renderScreen(req, res, referral.sum[0], referral.sum[1]);
 };
 
 // Organization Versus
-var renderVersus = function (req, res) {
-    res.render('base', txtOrganization.txtVersus);
-};
-
 module.exports.orgVersus = function (req, res) {
-    renderVersus(req, res);
+    renderScreen(req, res, referral.vs[0], referral.vs[1]);
 };
 
 // Organization HT theories
-var renderTheories = function (req, res) {
-    res.render('org/theories', txtOrganization.txtTheories);
-};
-
 module.exports.orgTheories = function (req, res) {
-    renderTheories(req, res);
+    renderScreen(req, res, referral.theories[0], referral.theories[1]);
 };

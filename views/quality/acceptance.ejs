@@ -4,127 +4,70 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" role="tab" href="#overview">Overview</a>
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#<%=overview.title%>"><%=overview.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#writing"><%=writing.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=writing.stitle%>"><%=writing.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#minimum"><%=minimum.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=minimum.stitle%>"><%=minimum.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#done"><%=done.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=done.stitle%>"><%=done.title%></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" role="tab" href="#acceptance"><%=acceptance.title%></a>
+    <a class="nav-link" data-toggle="tab" role="tab" href="#<%=acceptance.stitle%>"><%=acceptance.title%></a>
   </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active" id="overview" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <% for (var i=0; i<overview.length; i++) { %>
-                        <p class="card-text"><%-overview[i]%></p>
-                    <% } %>
-                </div>
-				<div class="card card-block">
-                    <div class="col-sm-12">
-                        <div class="col-sm-2"></div>
-                            <div class="col-sm-8">
-                                <div class="card card-block">
-                                    <img class="w-100" src="/<%-image%>" alt="self-organization">
-                                </div>
-                            </div>
-                        <div class="col-sm-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="tab-pane active" id="<%=overview.title%>" role="tabpanel">
+        <% data = overview; %>
+		<%-include ../_paraUneImage.ejs %>
     </div>
 	
-    <div class="tab-pane" id="writing" role="tabpanel">
+    <div class="tab-pane" id="<%=writing.stitle%>" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
-                    <div class="card card-block">
-                        <% for (var i=0; i<writing.comment.length; i++) { %>
-                            </p><%-writing.comment[i]%>
-                        <% } %>
-                    </div>
-					<div class="card card-block bg-faded">
-                        <% for (var i=0; i<writing.example.length; i++) { %>
-                            </p><%-writing.example[i]%>
-                        <% } %>
-                    </div>
+                    
+						<% data = writing; %>
+						<%-include ../_paragraphe.ejs %>
+                    
+                        <% data = writing.example; %>
+						<%-include ../_example.ejs %>
+                    
                 </div>
                 
             </div>
         </div>
     </div>
    
-    <div class="tab-pane" id="minimum" role="tabpanel">
+    <div class="tab-pane" id="<%=minimum.stitle%>" role="tabpanel">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-block">
                     <div class="card card-block">
-                        <div class="card card-block">
-                            <% for (var i=0; i<minimum.comment.length; i++) { %>
-                                </p><%-minimum.comment[i]%>
-                            <% } %>
-                        </div>
-						<div class="card card-block">
-							<table class="table">
-								<% for (var i=0; i<minimum.cascading.length; i++) { %>
-									<tr>
-										<td>
-											<%-minimum.cascading[i].title%>
-										</td>
-										<td>
-											<%-minimum.cascading[i].comment%>
-										</td>
-									</tr>
-								<% } %>
-							</table>
-						</div>
+                        <% data = minimum; %>
+						<%-include ../_paragraphe.ejs %>
+						
+						<% data = minimum.cascading; %>
+						<%-include ../_table.ejs %>
                     </div> 
                 </div>
             </div>
         </div>
     </div>
 	
-	<div class="tab-pane" id="done" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-                        <div class="card card-block">
-                            <% for (var i=0; i<done.comment.length; i++) { %>
-                                </p><%-done.comment[i]%>
-                            <% } %>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
+	<div class="tab-pane" id="<%=done.stitle%>" role="tabpanel">
+        <% data = done; %>
+		<%-include ../_paragraphe.ejs %>
     </div>
 	
-	<div class="tab-pane" id="acceptance" role="tabpanel">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card card-block">
-                    <div class="card card-block">
-                        <div class="card card-block">
-                            <% for (var i=0; i<acceptance.comment.length; i++) { %>
-                                </p><%-acceptance.comment[i]%>
-                            <% } %>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
+	<div class="tab-pane" id="<%=acceptance.stitle%>" role="tabpanel">
+        <% data = acceptance; %>
+		<%-include ../_paragraphe.ejs %>
     </div>
 </div>
 

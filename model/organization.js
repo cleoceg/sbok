@@ -245,7 +245,7 @@ var org_perso = {
 	title: 'Personnel Selection',
 	stitle: 'perso',
 	comment: [
-		'Yhe figure below lists the desirable traits for the core Scrum roles.'
+		'The figure below lists the desirable traits for the core Scrum roles.'
 	],
 	image: '../images/figure_3_3.png'
 };
